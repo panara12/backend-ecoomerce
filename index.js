@@ -17,7 +17,7 @@ const path = require('path');
 
 app.use(cors(
   {
-    origin: "http://localhost:5173", //frontend URL
+    origin: "https://frontend-ecommmerce-70eh36yss-abhays-projects-c36dff84.vercel.app", //frontend URL
     credentials: true, // Allow cookies to be sent
   }
 ))
