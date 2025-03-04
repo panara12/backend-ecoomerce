@@ -15,12 +15,23 @@ const order = require("./routes/order");
 
 const path = require('path');
 
-app.use(cors(
-  {
-    origin: "https://frontend-ecommmerce-70eh36yss-abhays-projects-c36dff84.vercel.app", //frontend URL
-    credentials: true, // Allow cookies to be sent
-  }
-))
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://frontend-ecommmerce-70eh36yss-abhays-projects-c36dff84.vercel.app"
+];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+  })
+);
 
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
