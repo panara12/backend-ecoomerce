@@ -17,7 +17,7 @@ const path = require('path');
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://frontend-ecommmerce-70eh36yss-abhays-projects-c36dff84.vercel.app"
+  "https://frontend-ecommmerce-j4j8nqepi-abhays-projects-c36dff84.vercel.app"
 ];
 
 app.use(
@@ -34,7 +34,7 @@ app.use(
 );
 
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://frontend-ecommmerce-70eh36yss-abhays-projects-c36dff84.vercel.app");
+  res.header("Access-Control-Allow-Origin", "https://frontend-ecommmerce-j4j8nqepi-abhays-projects-c36dff84.vercel.app");
   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
   res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
   next();
