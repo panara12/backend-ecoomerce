@@ -17,7 +17,8 @@ const path = require('path');
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://frontend-ecommmerce-j4j8nqepi-abhays-projects-c36dff84.vercel.app"
+  "https://frontend-ecommmerce-j4j8nqepi-abhays-projects-c36dff84.vercel.app",
+  "https://frontend-ecommmerce-git-main-abhays-projects-c36dff84.vercel.app"
 ];
 
 app.use(
