@@ -16,9 +16,6 @@ const path = require('path');
 const allowedOrigins = [
   "http://localhost:5173",
   "http://localhost:3000",
-  "https://frontend-ecommmerce-j4j8nqepi-abhays-projects-c36dff84.vercel.app", // Your current Vercel URL
-  // Add your production domain when you get it
-  "https://your-production-domain.vercel.app",
   "https://abhay-testing.netlify.app"
 ];
 
@@ -54,6 +51,7 @@ app.use(cookieParser());
 // Session Middleware
 app.use(
   session({
+    name:'user',
     secret: process.env.SESSION_SECRET || "you_don't_know_that", 
     resave: false,
     saveUninitialized: false,
