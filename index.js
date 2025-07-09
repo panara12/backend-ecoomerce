@@ -17,7 +17,7 @@ const path = require('path');
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://frontend-ecommmerce-j4j8nqepi-abhays-projects-c36dff84.vercel.app"
+  "https://abhay-testing.netlify.app"
 ];
 
 app.use(
@@ -34,7 +34,7 @@ app.use(
 );
 
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://frontend-ecommmerce-j4j8nqepi-abhays-projects-c36dff84.vercel.app");
+  res.header("Access-Control-Allow-Origin", "https://abhay-testing.netlify.app");
   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
   res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
   next();
@@ -47,6 +47,7 @@ app.use(cookieParser());
 // Session Middleware
 app.use(
     session({
+      name:'user',
       secret: "you_don't_know_that", 
       resave: false,
       saveUninitialized: false,
