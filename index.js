@@ -18,7 +18,8 @@ const allowedOrigins = [
   "http://localhost:3000",
   "https://frontend-ecommmerce-j4j8nqepi-abhays-projects-c36dff84.vercel.app", // Your current Vercel URL
   // Add your production domain when you get it
-  "https://your-production-domain.vercel.app"
+  "https://your-production-domain.vercel.app",
+  "https://abhay-testing.netlify.app"
 ];
 
 console.log('Allowed origins:', allowedOrigins);
