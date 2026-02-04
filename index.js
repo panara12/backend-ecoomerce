@@ -83,7 +83,7 @@ app.use('/product', products)
 app.use('/cart', cart)
 app.use("/order", order);
 
-const mongoUrl = process.env.MONGODB_URL || 'mongodb+srv://panaraabhay2:abhay112004@cluster0.gmcq64y.mongodb.net/laser_db?retryWrites=true&w=majority&appName=Cluster0';
+const mongoUrl = process.env.MONGODB_URL;
 
 mongoose.connect(mongoUrl)
   .then(() => {
