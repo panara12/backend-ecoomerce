@@ -56,7 +56,7 @@ app.use(
     resave: false,
     saveUninitialized: false,
     store: MongoStore.create({
-      mongoUrl: process.env.MONGODB_URL || "mongodb+srv://panaraabhay2:abhay112004@cluster0.gmcq64y.mongodb.net/laser_db?retryWrites=true&w=majority&appName=Cluster0",
+      mongoUrl: process.env.MONGODB_URL,
       collectionName: "sessions",
       ttl: 24 * 60 * 60
     }),
